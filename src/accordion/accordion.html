@@ -1,5 +1,4 @@
 <div id="accordion_template">
-
     <div data-bind="css: $data.classes, visible: isShown">
     <!-- ko class: accordion-sections -->
         <!-- ko if: $data.rendered -->
@@ -7,11 +6,11 @@
             <span class="header-text" data-class="accordion-header-text"></span>
             <!-- ko template: { name: $data.header.headerTemplate || $parent.headerTemplate || "accordion_default_header_template", data: $data.header } -->
             <!-- /ko -->
-    </header>
-    <section data-bind="slideVisible: visible,
-                        template: { name: 'metadata_item_template', data: $data }"
-             class="inner-accordion"></section>
-    <!-- /ko -->
+        </header>
+        <section data-bind="slideVisible: visible,
+                            template: { name: 'metadata_item_template', data: $data }"
+                class="inner-accordion"></section>
+        <!-- /ko -->
     <!-- /ko -->
     </div>
 </div>
